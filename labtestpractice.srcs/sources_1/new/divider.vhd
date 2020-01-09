@@ -51,6 +51,8 @@ process (aux, bux)
 variable t1, t2: integer range 0 to 65535;
 variable x: std_logic_vector (15 downto 0);
 begin
+t1:= aux;
+t2:= bux;
 for i in 15 downto 0 loop
     if (t1 >= t2 * 2 ** i) then
         t1 := t1 - t2 * 2 ** i;
